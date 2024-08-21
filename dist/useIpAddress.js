@@ -43,7 +43,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = require("react");
 var useIpAddress = function () {
-    var _a = (0, react_1.useState)(null), ipAddress = _a[0], setIpAddress = _a[1];
+    var _a = (0, react_1.useState)(), ipAddress = _a[0], setIpAddress = _a[1];
     var _b = (0, react_1.useState)(null), error = _b[0], setError = _b[1];
     var _c = (0, react_1.useState)(true), isLoading = _c[0], setIsLoading = _c[1];
     (0, react_1.useEffect)(function () {
