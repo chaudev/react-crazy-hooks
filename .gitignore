@@ -1,0 +1,7 @@
+
+/node_modules
+/src
+/trash
+
+package-lock.json
+yarn.lock
