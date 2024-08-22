@@ -8,4 +8,20 @@ import useClipboard from "./useClipboard";
 import useIpAddress from "./useIpAddress";
 import useModalState from "./useModalState";
 import useURLParams from "./useURLParams";
-export { useWindowDimensions, useClipboard, useIpAddress, useModalState, useURLParams, };
+import useLocalStorage from "./useLocalStorage";
+import useFetch from "./useFetch";
+import useDebounce from "./useDebounce";
+import usePrevious from "./usePrevious";
+import useOnClickOutside from "./useOnClickOutside";
+export {
+  useWindowDimensions,
+  useClipboard,
+  useIpAddress,
+  useModalState,
+  useURLParams,
+  useLocalStorage,
+  useFetch,
+  useDebounce,
+  usePrevious,
+  useOnClickOutside,
+};

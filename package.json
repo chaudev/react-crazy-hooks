@@ -1,6 +1,6 @@
 {
   "name": "react-crazy-hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library of custom hooks for React, designed to simplify common tasks in both JavaScript and TypeScript projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

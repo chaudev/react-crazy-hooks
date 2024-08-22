@@ -1,5 +1,7 @@
 # React Crazy Hooks
 
+👉 Tài liệu TIẾNG VIỆT (Vietnamese Documents): [XEM NGAY](https://thatthuvi.com/lap-trinh/react-crazy-hooks)
+
 `react-crazy-hooks` is a collection of custom hooks for React, designed to simplify common tasks in both JavaScript and TypeScript projects. The library currently includes the following hooks:
 
 - `useWindowDimensions`
@@ -7,6 +9,14 @@
 - `useIpAddress`
 - `useModalState`
 - `useURLParams`
+
+### Update 1.0.2
+
+- `useLocalStorage`
+- `useFetch`
+- `useDebounce`
+- `usePrevious`
+- `useOnClickOutside`
 
 More hooks will be added in future updates.
 
@@ -94,6 +104,32 @@ const IpAddressComponent = () => {
 };
 ```
 
+### useDebounce
+
+Debounce a value.
+
+```javascript
+import { useDebounce } from "react-crazy-hooks";
+
+function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+
+  // Use debouncedSearchTerm for API calls or other side effects
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <p>Debounced Value: {debouncedSearchTerm}</p>
+    </div>
+  );
+}
+```
+
 ### useModalState
 
 This hook manages the state of a modal.
@@ -132,6 +168,101 @@ const URLParamsComponent = () => {
 
   return <div></div>;
 };
+```
+
+### useLocalStorage
+
+Manage state with Local Storage.
+
+```javascript
+import { useLocalStorage } from "react-crazy-hooks";
+
+function App() {
+  const [name, setName] = useLocalStorage("name", "John Doe"); // "name" = key, "John Doe" = initialValue
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <p>{name}</p>
+    </div>
+  );
+}
+```
+
+### useFetch
+
+Fetch data from an API.
+
+```javascript
+import { useFetch } from "react-crazy-hooks";
+
+function App() {
+  const { data, loading, error } = useFetch("https://api.thatthuvi.com/data");
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <div>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
+```
+
+### usePrevious
+
+Store the previous value of a variable.
+
+```javascript
+import { usePrevious } from "react-crazy-hooks";
+
+function App() {
+  const [count, setCount] = useState(0);
+  const prevCount = usePrevious(count);
+
+  useEffect(() => {
+    console.log(`Current: ${count}, Previous: ${prevCount}`);
+  }, [count]);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <p>Current Count: {count}</p>
+      <p>Previous Count: {prevCount}</p>
+    </div>
+  );
+}
+```
+
+### useOnClickOutside
+
+Detect clicks outside of a specified element.
+
+```javascript
+import { useOnClickOutside } from "react-crazy-hooks";
+
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef(null);
+
+  useOnClickOutside(ref, () => setIsOpen(false));
+
+  return (
+    <div>
+      <button onClick={() => setIsOpen(true)}>Open Menu</button>
+      {isOpen && (
+        <div ref={ref}>
+          <p>Click outside of this box to close it.</p>
+        </div>
+      )}
+    </div>
+  );
+}
 ```
 
 ## Contributing
