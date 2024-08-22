@@ -1,6 +1,6 @@
 # React Crazy Hooks
 
-👉 Tài liệu TIẾNG VIỆT (Vietnamese Documents): [XEM NGAY](https://thatthuvi.com/lap-trinh/react-crazy-hooks)
+📚 Tài liệu TIẾNG VIỆT (Vietnamese Documents): [XEM NGAY](https://thatthuvi.com/lap-trinh/react-crazy-hooks)
 
 `react-crazy-hooks` is a collection of custom hooks for React, designed to simplify common tasks in both JavaScript and TypeScript projects. The library currently includes the following hooks:
 
