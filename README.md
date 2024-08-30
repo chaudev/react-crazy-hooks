@@ -2,7 +2,7 @@
 
 📚 Tài liệu TIẾNG VIỆT (Vietnamese Documents): [XEM NGAY](https://thatthuvi.com/lap-trinh/react-crazy-hooks)
 
-`react-crazy-hooks` is a collection of custom hooks for React, designed to simplify common tasks in both JavaScript and TypeScript projects. The library currently includes the following hooks:
+react crazy hooks is a collection of custom hooks for React, designed to simplify common tasks in both JavaScript and TypeScript projects. The library currently includes the following hooks:
 
 - `useWindowDimensions`
 - `useClipboard`
@@ -276,3 +276,7 @@ Nguyen Phuc Bao Chau - [GitHub Profile](https://github.com/chaudev)
 ## License
 
 This project is licensed under the MIT License.
+
+## Keywords
+
+react hook, react crazy hooks, react custom hooks
